@@ -1,0 +1,146 @@
+$color: #3D007A;
+$sprites: url("mega_sprite.svg");
+
+$arkhip: "Arkhip", sans-serif;
+
+@font-face {
+font-family: "Arkhip";
+src: font-url('Arkhip_font.ttf');
+}
+
+$sidebar-layout: (
+  columns: 2,
+  gutter: 40px
+);
+
+.background_elements {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.background {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  background-color: $color;
+  background-image: $sprites;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 40px;
+  height: 1200px;
+}
+
+.video {
+ border-radius: 100%;
+ display: flex;
+ z-index: 1;
+ min-width: 50%;
+ min-height: 50%;
+ max-width: 50%;
+ max-height: 50%;
+ width: 30px;
+ height: auto;
+ margin: auto;
+ top: -40%;
+ position: relative;
+}
+
+
+.kalyco {
+  border: 10px solid black;
+  color: black;
+  margin: auto;
+  font-family: $arkhip;
+  font-size: 5em;
+  position: relative;
+  top: -20%;
+}
+
+img.octocat {
+  -webkit-filter: invert(100%);
+  width: 77px;
+  height: 77px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+
+  ul.left-links {
+    display: flex;
+    width: 10%;
+    flex-direction: column;
+  }
+
+  ul.right-links {
+    display: flex;
+    width: 10%;
+    flex-direction: column;
+  }
+}
+
+.triangle-grid {
+  background-color: $color;
+  width: 0;
+  display: flex;
+  justify-content: space-between;
+
+  .triangle-right {
+    display: flex;
+    width: 25%;
+    height: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top: 800px solid transparent;
+    border-bottom: 800px solid transparent;
+    border-left: 800px solid black;
+  }
+  .triangle-right:after {
+    content: "";
+    border-top: 800px solid transparent;
+    border-bottom: 800px solid transparent;
+    border-left: 800px solid black;
+  }
+
+  .triangle-left {
+    display: flex;
+    width: 25%;
+    height: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top: 800px solid transparent;
+    border-bottom: 800px solid transparent;
+    border-right: 800px solid black;
+  }
+  .triangle-left:after {
+    content: "";
+    border-top: 800px solid transparent;
+    border-bottom: 800px solid transparent;
+    border-right: 800px solid black;
+  }
+}
+
+.svg-triangle path {
+  stroke-width: 5;
+  stroke: black;
+}
+
+
+.pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid black;
+  border-left: 60px solid black;
+  border-bottom: 60px solid black;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
